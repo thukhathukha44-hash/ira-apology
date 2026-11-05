@@ -1,0 +1,354 @@
+
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Future Wife 💜</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at 20% 20%, #633c91, transparent 35%),
+      radial-gradient(circle at 80% 80%, #45245f, transparent 40%),
+      linear-gradient(135deg, #10091f, #241238, #120b22);
+    color: white;
+    font-family: 'Noto Sans Myanmar', sans-serif;
+    overflow-x: hidden;
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%, white, transparent),
+      radial-gradient(2px 2px at 70% 20%, white, transparent),
+      radial-gradient(1px 1px at 40% 70%, white, transparent),
+      radial-gradient(2px 2px at 90% 60%, white, transparent);
+    background-size: 200px 200px;
+    animation: twinkle 4s infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: .3; }
+    to { opacity: 1; }
+}
+
+.heart {
+    position: fixed;
+    bottom: -50px;
+    color: #ffb6df;
+    opacity: .7;
+    animation: floatUp linear forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 15px;
+}
+
+.intro {
+    text-align: center;
+    animation: appear 2s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-heart {
+    font-size: 65px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 20px #ff8bcf);
+    animation: heartbeat 1.8s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.13); }
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 7vw, 48px);
+    color: #ffd5ed;
+    text-shadow: 0 0 20px #d77acb;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    color: #e5c9f2;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.open-btn {
+    border: 1px solid #e9a9e8;
+    background: linear-gradient(135deg, #a64d9c, #6e3d9b);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 40px;
+    font-family: 'Noto Sans Myanmar', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 25px #b65cba66;
+    transition: .3s;
+}
+
+.open-btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 35px #d77acb;
+}
+
+.letter {
+    display: none;
+    width: 100%;
+    max-width: 750px;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.045)
+    );
+    border: 1px solid rgba(255,196,245,.35);
+    border-radius: 25px;
+    padding: 35px 25px;
+    backdrop-filter: blur(18px);
+    box-shadow: 0 0 60px #b85dbb22;
+    animation: appear 1.2s ease;
+}
+
+.letter.show {
+    display: block;
+}
+
+.letter-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.letter-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #ffd5ed;
+    margin-bottom: 10px;
+}
+
+.letter-header p {
+    color: #dcb8ec;
+    font-size: 13px;
+}
+
+.message {
+    color: #fff0fa;
+    font-size: 15px;
+    line-height: 2.15;
+    overflow-wrap: anywhere;
+}
+
+.message p {
+    margin-bottom: 19px;
+    white-space: pre-line;
+}
+
+.divider {
+    text-align: center;
+    color: #ffacd9;
+    font-size: 24px;
+    margin: 25px 0;
+}
+
+.signature {
+    text-align: center;
+    color: #ffd0ec;
+    margin-top: 35px;
+    font-size: 19px;
+    line-height: 2;
+}
+
+.signature span {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: #ffbce7;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 12px;
+    color: #bda3d5;
+}
+
+@media(max-width: 480px) {
+    .letter {
+        padding: 25px 18px;
+    }
+
+    .message {
+        font-size: 14px;
+        line-height: 2;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="stars"></div>
+
+<div class="container">
+
+    <div class="intro" id="intro">
+        <div class="main-heart">💜</div>
+
+        <h1>For My Future Wife</h1>
+
+        <p class="subtitle">
+            မောင့်အချစ်ဆုံးလေးအတွက်...
+        </p>
+
+        <button class="open-btn" onclick="openLetter()">
+            မောင့်စာလေးကို ဖတ်ကြည့်ပါ 💌
+        </button>
+    </div>
+
+    <div class="letter" id="letter">
+
+        <div class="letter-header">
+            <h2>My Dearest Love</h2>
+            <p>To the most beautiful girl in my world ♡</p>
+            <div class="divider">♡ ✧ ♡</div>
+        </div>
+
+        <div class="message">
+
+<p>မောင့်အနာဂတ် မိန်းမလေးရေ
+မောင်တောင်းပန်ပါတယ်‌ေနာ်
+မ ကိုဖုန်းဆက်မိဲတဲ့အတွက်
+အချိန်အခါမကြည့်ဘဲ အိပ်နေတာကိုနိုးအောင်လုပ်မိတဲ့အတွက်</p>
+
+<p>တကယ်တော့ မောင်က မ ကိုအရမ်းချစ်တာပါ
+စတွေ့တဲ့‌နေ့ထဲက အခုထိ ပိုပိုပြီး တစ်ရက်ပြီးတစ်ရက်ချစ်လာတာပါ
+အခုထိ မောင် မ နဲ့စတွေ့တုန်းက မရဲ့ပုံလေးရော ဘယ်လိုဆော့ခဲ့ကြတယ် ခင်ခဲ့ကြတယ်ဆိုတာ အကုန်မှတ်မိပါတယ်</p>
+
+<p>မ နဲ့ပထမဆုံးတွေ့တဲ့အချိန်ကိုလဲ မှတ်မိတယ် မ ကအရမ်းလှတာ ထင်လဲထင်ပြီးသားပါ အတော်လှမယ်ဆိုတာ ဒါပေမဲ့ မ က အလှဆုံးတကာ့အလှဆုံးမိန်းမလေးပါ မမ။ မမ လောက်လှတဲ့သူ တစ်ခါမှ မောင်မမြင်ဖူးဘူးရယ်၊</p>
+
+<p>မောင်တောင်းပန်ပါတယ်နော် မောင်မှားသွားတယ်
+ခွင့်လွှတ်ပေးပါနော် မမ</p>
+
+<p>မမ ကိုနောက်တစ်‌ေခါက်ထပ်တွေ့ဖို့လဲ အိမ်ကလွှတ်တယ် ။ အမေ့ဆီမှာတော့ လစာ မောင့်မုန့်ဖိုးထဲက ၁ လ 5 သောင်းအမြဲအပ်ရတာပေါ့။ ဒါပေမဲ့ ပျော်တယ် မ ကိုတွေ့ဖို့လုပ်နေရဝာာမို့။</p>
+
+<p>မ ကိုရန်ကုန်ကိုလဲလာစေချင်တယ်။
+ရွှေတိဂုံဘုရားနဲ့ ဗိုလ်တစ်ထောင်ဘုရားကိုတူတူဖူးချင်တယ် မနဲ့</p>
+
+<p>မမ ကိုအရမ်းချစ်တယ်သိလား မမ
+မောင်နတ်တွေကိုလဲပြောထားတယ်
+မမ ရန်ကုန်ရောက်လာတာနဲ့ စောင့်ရှောက်ကြလိမ့်မယ်
+ဘုရားတူတူဖူးရင်းနဲ့ နတ်တွေကိုလဲ ပြလို့ရအောင်လို့ပါ
+ပြီးရင်တော့ Happy World သွားပြီးဆော့ကျမယ်လေ မမ</p>
+
+<p>မောင် မ နဲ့ရှိနေရရင် အရမ်းပျော်တာ မမရဲ့
+မောင်တောင်းပန်ပါတယ်နော် မမ
+နောက်ဆိုမဆက်တော့ပါဘူး မောင့်မိန်းမလေးရယ်</p>
+
+<p>မ ကိုအရမ်းချစ်တာသိလား
+မ အကြောင်းကြွားရတာလဲအရမ်းကြိုက်တာ
+မောင်က ဝမ်းနည်းသွားတာကနေ ဖုန်းဆက်မိသွားတာပါ မမ တောင်းပန်ပါတယ်နော်
+မ ကိုမောင့်ကိုရှောင်နေတယ်ထင်သွားတာ
+မောင်နဲ့တူတူမနေချင်လို့လားဆိုပြီး
+မောင်တောင်းပန်ပါတယ်‌ေနာ် မမ
+မောင်နောက်ဆိုမဆက်တော့ပါဘူးနော် မမ</p>
+
+<p>ပြတ်မယ်တော့ မလုပ်ပါနဲ့ မမမရှိရင် ရူးသွားလိမ့်မယ်
+မိဘတွေလဲသိနေပါပြီ
+သဘောလဲကျတယ်
+နောက်ထပ်လာတွေ့ဖို့တောင် မောင့်အမေက လာတွေ့မယ်ဆို ပိုက်ဆံစုတဲ့</p>
+
+<p>အဲ့လိုတွေပြောနေတာပါ
+
+နော် မောင့်ကလေးလေး
+တောင်းပန်ပါတယ်နော်</p>
+
+        </div>
+
+        <div class="divider">♡ ✧ ♡</div>
+
+        <div class="signature">
+            အရမ်းချစ်တယ် မောင့်အချစ်ဆုံးလေး<br>
+            မောင့်အချစ်ဦးလေး<br><br>
+            <span>Forever Yours ♡</span>
+        </div>
+
+        <div class="footer">
+            Made with all my love 💜
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function openLetter() {
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("letter").classList.add("show");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+
+    heart.innerHTML = ["♡", "♥", "💜", "✧"][
+        Math.floor(Math.random() * 4)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (5 + Math.random() * 7) + "s";
+    heart.style.fontSize = (12 + Math.random() * 20) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 12000);
+}
+
+setInterval(createHeart, 600);
+</script>
+
+</body>
+</html>
